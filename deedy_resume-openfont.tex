@@ -1,0 +1,350 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Pushpinder Pal Singh}{ 
+\urlstyle{same}\href{https://bento.me/swiftlysingh}{bento/swiftlysingh} | \href{https://github.com/swiftlysingh}{github/swiftlysingh}\\
+\href{mailto:sayhi@swiftlysingh.com}{sayhi@swiftlysingh.com} | +1 (279) 208 3214 | Sacramento, CA
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{minipage}[t]{0.33\textwidth} 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Links} 
+% Github:// \href{https://github.com/pushpinderpalsingh}{\bf pushpinderpalsingh}\\
+% LinkedIn://  \href{https://www.linkedin.com/in/pushpinderpalsingh/}{\bf pushpinderpalsingh} \\
+% Blog://  \href{http://technicalnow.in/}{\bf technicalnow.in} \\
+% Twitter://  \href{https://twitter.com/pushpinderpal_}{\bf @pushpinderpal_} 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     COURSEWORK
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+% Data Science, Coding Blocks \\
+% iOS Bootcamp by Angela Yu, Udemy \\
+% Linux Shell Scripting by Jason Cannon, Udemy \\
+% \vspace{\topsep} 
+% \subsection{Undergraduate}
+% Computer Fundamentals \\
+% Algo Designs \& Data Structures\\
+% Operating System \\
+% Compiler Design + Practicum \\
+% Computer Networking + Practicum \\
+% Database Management \\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \end{minipage} 
+% \hfill
+\begin{minipage}[t]{0.98\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\runsubsection{MS in Computer Science |}
+\descript{California State University}
+\location{August 2024 - May 2026 (Expected) | Sacramento, California}
+% \subsection{}
+\vspace{\topsep}
+\runsubsection{BE in Computer Engineering |}
+\descript{Netaji Subhas University of Technology }
+\location{Aug 2018 - May 2022 | New Delhi, IN}
+
+% \location{My coursework included but was not limited to the following}
+% \vspace{\topsep}
+% \begin{minipage}[t]{0.49\textwidth}
+% \begin{tightemize}
+% \item Algorithm Designs \& Data Structures
+% \item Software Development Life-cycle
+% \end{tightemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.49\textwidth}
+% \begin{tightemize}
+% \item Cloud Computing
+% \item Open Source Technologies
+% \end{tightemize}
+% \end{minipage}
+% \sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\textbf{\href{https://www.gojek.io/}{\runsubsection{Software Engineer - Mobile |}}} 
+\descript{GOJEK}
+\location{May 2022 – August 2024}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Revamped Help Center UI, improving usability and reducing support queries by 15\%.
+    \item Built a PIN-based auth framework, enabling a single PIN across multiple GoTo apps, reducing development time by 20\%.
+    \item Co-developed the GoPay app in Flutter, supporting 130M daily users with an enhanced user experience.
+    \item Implemented a Server Driven UI for GoPay's homepage, enabling dynamic updates without app releases.
+    \item Integrated an in-house analytics framework, reducing third-party dependencies and cutting costs by 30\%.
+\end{tightemize}
+\sectionsep
+
+\textbf{\href{https://summerofcode.withgoogle.com/projects/6623823417311232}{\runsubsection{Swift Developer |}}} 
+\descript{Google Summer of Code - VideoLAN}
+\location{June 2021 – August 2021}
+\begin{tightemize}
+    \item Added the "Continue Watching" feature in VLC media player for iOS, enhancing user retention and engagement.
+    \item Improved UI/UX using Swift, aligning with Apple's design guidelines for a more intuitive user experience.
+    \item Participated in code reviews, ensuring adherence to best practices and maintaining code quality.
+    \item Fixed critical bugs, increasing the stability and performance of the VLC iOS app.
+    \item Contributed to documentation, improving onboarding for new developers in the VideoLAN community.
+\end{tightemize}
+\sectionsep
+
+% \runsubsection{iOS Developer Intern|}
+% \descript{Parallel Reality}
+% \location{April 2021 – May 2021}
+% % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+% \item Developed key missing features for the iOS version of an existing Android application
+% \item Identified and resolved critical bugs to ensure a smooth final release
+% \end{tightemize}
+
+% \runsubsection{International Organization of Software Developers|}
+% \descript{Head of Open Source and Mobile Technologies }
+% \location{Sep 2020 – Present}
+% % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+% \item Mentoring and helping juniors and fellow batchmates to get started with open source and/or Mobile Development.
+% \item Organizing and Managing hackathons and other college and inter-college events
+% \item Managing undergoing projects repositories 
+% \end{tightemize}
+% \sectionsep
+
+% \textbf{\href{https://livestockcity.com/}{\runsubsection{LivestockCity}}} 
+% \descript{ |  Lead iOS Developer Intern}
+% \location{July 2020 – October 2020}
+% \begin{tightemize}
+% \item Maintaining and Developing iOS App
+% \item Delegating tasks and coordinating the progress with 3 person iOS team
+% \item Coordinating with various teams for the development of app (API, UI etc)
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add Skills inside projects? 
+% \section{}
+% \vspace{\topsep}
+\runsubsection{Skills: }
+\descript{Apple Platforms (Swift), Flutter, Open Source, DevOPs, Self-hosting, IoT, 3D Printing}
+% \runsubsection{Other: }
+% \descript{ Project Management, Technical Writing, Video \& Photo Editing, 3D printing}
+% \location{Over 5000 lines:}
+% IoT \
+% \textbullet{} Python \textbullet{} Swift \textbullet{} Shell \textbullet{} Git \\ 
+% \location{Over 1000 lines:}
+% Data Science\textbullet{} Linux Kernel Development\textbullet{} C \textbullet{} C++ \textbullet{} CSS \textbullet{} HTML \textbullet{} Java \\
+% \location{Familiar:}
+% JavaScript \textbullet{} Assembly \textbullet{} MySQL
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+% \textbf{\href{https://github.com/swiftlysingh/PowerPlay}{\runsubsection{PowerPlay}}} 
+% \location{July '23 - Present}
+% PowerPlay is an app for cricket enthusiasts. The app will show the scores for live cricket matches directly on iOS lock screen using Live Activity thanks to ActivityKit framework. The app uses a custom backend specifically designed to handle live activities \textit{with a near realtime refresh rate}. This backend is hosted on-premise for best performance to cost ratio.
+
+% \vspace{\topsep}
+
+\textbf{\href{https://apps.apple.com/app/artiweather/id6446815662}{\runsubsection{ArtiWeather}}} 
+\location{An Art Weather App}
+\begin{tightemize}
+    \item Developed and launched ArtiWeather for iOS 18, achieving 1.2k downloads and 5k organic impressions on launch day.
+    \item Integrated on-device Stable Diffusion for weather-based image generation, solving real-time rendering challenges.
+    \item Built widgets using WidgetKit for displaying weather visuals on the home screen.
+    \item Currently optimizing SD Model for portrait images, enhancing download UX/UI, and adding support for custom cities.
+\end{tightemize}
+\sectionsep
+
+\textbf{\href{https://github.com/swiftlysingh/Holder}{\runsubsection{Holder}}} 
+\location{A Secure Card Vault}
+\begin{tightemize}
+    \item Built an iOS app using Swift for securely storing credit and debit card details.
+    \item Used iOS Keychain with iCloud sync for encrypted storage, ensuring data privacy through local-only storage.
+    \item Designed an intuitive interface with SwiftUI, providing a seamless user experience for managing card details.
+    \item Integrated biometric authentication for added security, allowing easy and secure access to stored information.
+\end{tightemize}
+% \sectionsep
+
+% \vspace{\topsep}
+
+% \textbf{\href{https://github.com/swiftlysingh/SpaceDash}{\runsubsection{SpaceDash}}} 
+% \location{June '20 –  Feb '21}
+% SpaceDash is an open-source app that provides information of spaceflight launches and news amongst other things. The project uses test-drive agile development processes, where requirements are turned into test cases, and code is improved upon.
+
+% \subsection{}
+% \location\textbf{Learning Outcome:}
+
+% \begin{minipage}[t]{0.39\textwidth}
+% \begin{tightemize}
+% \item CoreML 
+% \item CI/CD Pipelines
+% \end{tightemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.59\textwidth}
+% \begin{tightemize}
+% \item Human Interface Guidelines
+% \item Swift features such as Generics and Escaping Closures
+% \end{tightemize}
+% \end{minipage}
+% \vspace{\topsep}
+
+% \textbf{\href{https://github.com/swiftlysingh/SpaceDash}{\runsubsection{SpaceDash}}} 
+% \location{June '20 –  Feb '21}
+% SpaceDash is an open-source app that provides information of spaceflight launches and news amongst other things. The project uses test-drive agile development processes, where requirements are turned into test cases, and code is improved upon.
+% \location\textbf{Learning Outcome:}
+
+% \begin{minipage}[t]{0.39\textwidth}
+% \begin{tightemize}
+% \item Project Management
+% \item CI/CD Pipelines
+% \end{tightemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.59\textwidth}
+% \begin{tightemize}
+% \item Human Interface Guidelines
+% \item Swift features such as Generics and Escaping Closures
+% \end{tightemize}
+% \end{minipage}
+% \vspace{\topsep}
+% \sectionsep
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \sectionsep
+
+% \runsubsection{HomeLab}
+% \location{Sep 2019 – Present}
+% A fairly advanced HomeLab running on multiple Raspberry Pi, an old laptop and a Digital Ocean Droplet. I have multiple services running that helps in my day to day live.
+% \begin{tightemize}
+% \item Performing regular backups of my Laptop to local storage as well as Google Drive
+% \item A network attached storage that stores and shares all my media over the network and perform regular backups
+% % \item Protecting my WiFi users from internet trackers and ads
+% % \item Help me print wirelessly to a non-wireless printer
+% \item Run a private instance of a password manager that syncs password across my devices
+% \item Running CI/CD pipelines for some of my projects
+% \end{tightemize}
+% \sectionsep
+
+% \runsubsection{Health AI}
+% \location{Dec 2019 – April 2020}
+% This project aimed for the betterment of the healthcare sector in India. We worked on timely detection of diseases on the basis of commonly used medical reports. Currently, the system can detect up to 11 different diseases and medical conditions. Project have been deployed on all the platforms (like iOS, Android, website etc.).
+% \\ \textbf{\href{https://github.com/HealthApp101}{Github}} 
+% \textbf{\href{http://healthapp.ml}{Website}} 
+% % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2021 & \textbf{Winner} & \textbf{Smart India Hackathon 2020} \\
+     & & Built an AI IoT system to predict and adjust lighting and HVAC demand using sensors. \\
+     & & SIH is a national hackathon by the Government of India, tackling real-world challenges.
+\end{tabular}
+\sectionsep
+
+\end{minipage} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{document}  \documentclass[]{article}
