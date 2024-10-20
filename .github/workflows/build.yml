@@ -2,7 +2,7 @@ name: Compile LaTeX and Create Release
 
 on:
   push:
-    branches: [ main ]  # Adjust this if your main branch has a different name
+    branches: [ master ]  # Adjust this if your main branch has a different name
 
 jobs:
   build_latex:
