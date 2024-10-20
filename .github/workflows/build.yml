@@ -38,6 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Pushpinder_Resume.pdf  # Replace with your output PDF file name
-          asset_name: resume.pdf  # You can change this name if you want
+          asset_path: ./main.pdf  # This should be the path to your generated PDF
+          asset_name: Pushpinder_Resume.pdf  # This will be the name of the file in the release
           asset_content_type: application/pdf
