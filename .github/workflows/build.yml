@@ -78,19 +78,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-          
-      - name: Copy generated PDF to deployment directory
-        run: |
-          mkdir -p out
-          cp main.pdf out/Pushpinder_Resume.pdf
 
-      - name: Create index.html
+      - name: Rename PDF to index.pdf
+        run: mv main.pdf index.pdf
+
+      - name: Create .htaccess file
         run: |
-          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a></body></html>' > ./out/index.html
+          echo "RewriteEngine On" > .htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
+          echo "RewriteRule ^(.*)$ index.pdf [L]" >> .htaccess
+          echo "AddType application/pdf .pdf" >> .htaccess
+          echo "AddHandler application/x-httpd-php .pdf" >> .htaccess
+          echo "Header set Content-Disposition inline" >> .htaccess
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.PAT }}
-          publish_dir: ./out
+          publish_dir: .
+          force_orphan: true
+          keep_files: false
+          enable_jekyll: false
+          commit_message: "Deploy PDF to GitHub Pages"
           publish_branch: gh-pages
