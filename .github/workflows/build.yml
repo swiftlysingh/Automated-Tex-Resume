@@ -71,3 +71,22 @@ jobs:
           asset_path: ./main.pdf
           asset_name: Pushpinder_Resume.pdf
           asset_content_type: application/pdf
+
+  deploy_to_github_pages:
+    needs: compile_latex
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy generated PDF to deployment directory
+        run: |
+          mkdir -p out
+          cp main.pdf out/Pushpinder_Resume.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
