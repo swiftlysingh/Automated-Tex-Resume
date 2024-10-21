@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Homebrew) (preloaded format=xelatex 2024.10.6)  20 OCT 2024 16:07
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Homebrew) (preloaded format=xelatex 2024.10.6)  20 OCT 2024 17:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,11 +480,11 @@ Package fontspec Info: Font family 'Raleway-Medium(0)' created for font
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Lig(0)/m/sc' undefined
-(Font)              using `TU/Lato-Lig(0)/m/n' instead on input line 120.
+(Font)              using `TU/Lato-Lig(0)/m/n' instead on input line 70.
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Lig(1)/m/sc' undefined
-(Font)              using `TU/Lato-Lig(1)/m/n' instead on input line 120.
+(Font)              using `TU/Lato-Lig(1)/m/n' instead on input line 70.
 
 
 Package fontspec Info: Font family 'Lato-Bol(0)' created for font 'Lato-Bol'
@@ -499,12 +499,12 @@ Package fontspec Info: Font family 'Lato-Bol(0)' created for font 'Lato-Bol'
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Bol(0)/b/n' undefined
-(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 122.
+(Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 72.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 331.
+(Font)              <7> on input line 148.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 331.
+(Font)              <5> on input line 148.
 (./main.bbl) [1
 
 ] (./main.aux)
@@ -520,12 +520,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3A64DD53B586AB7DE5B4928EA7E44758;440.
  ) 
 Here is how much of TeX's memory you used:
- 12475 strings out of 474773
- 250882 string characters out of 5747933
+ 12473 strings out of 474773
+ 250822 string characters out of 5747933
  1947839 words of memory out of 5000000
- 34450 multiletter control sequences out of 15000+600000
+ 34448 multiletter control sequences out of 15000+600000
  558853 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,11n,137p,422b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,11n,137p,411b,329s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (1 page).
