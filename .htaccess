@@ -1,6 +1,0 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.pdf [L]
-AddType application/pdf .pdf
-AddHandler application/x-httpd-php .pdf
-Header set Content-Disposition inline
