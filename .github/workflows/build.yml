@@ -78,11 +78,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+          
       - name: Copy generated PDF to deployment directory
         run: |
           mkdir -p out
           cp main.pdf out/Pushpinder_Resume.pdf
+
+      - name: Create index.html
+        run: |
+          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a></body></html>' > ./out/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
