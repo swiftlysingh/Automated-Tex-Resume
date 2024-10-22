@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Homebrew) (preloaded format=xelatex 2024.10.6)  20 OCT 2024 17:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Homebrew) (preloaded format=xelatex 2024.10.6)  21 OCT 2024 18:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -502,9 +502,9 @@ LaTeX Font Warning: Font shape `TU/Lato-Bol(0)/b/n' undefined
 (Font)              using `TU/Lato-Bol(0)/m/n' instead on input line 72.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 148.
+(Font)              <7> on input line 147.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 148.
+(Font)              <5> on input line 147.
 (./main.bbl) [1
 
 ] (./main.aux)
@@ -517,7 +517,7 @@ L3 programming layer <2024-02-20>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3A64DD53B586AB7DE5B4928EA7E44758;440.
+(rerunfilecheck)             Checksum: F2A583D9F5EFA3D9822CCA62D02F4D52;574.
  ) 
 Here is how much of TeX's memory you used:
  12473 strings out of 474773
