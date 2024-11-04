@@ -7,12 +7,14 @@ on:
 jobs:
   compile_latex:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
           latexmk_use_xelatex: true
@@ -35,6 +37,8 @@ jobs:
   create_release:
     needs: compile_latex
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Get current date
         id: date
@@ -42,39 +46,43 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           tag_name: v${{ steps.date.outputs.date }}
-          release_name: Release ${{ steps.date.outputs.date }}
+          name: Release ${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
+          generate_release_notes: true
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
 
   upload_asset:
     needs: [compile_latex, create_release]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
         with:
           name: resume-pdf
 
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
+      - name: Release Asset
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf
-          asset_name: Pushpinder_Resume.pdf
-          asset_content_type: application/pdf
+          tag_name: v${{ steps.date.outputs.date }}
+          files: main.pdf
+          name: Pushpinder_Resume.pdf
 
   deploy_to_github_pages:
     needs: compile_latex
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
