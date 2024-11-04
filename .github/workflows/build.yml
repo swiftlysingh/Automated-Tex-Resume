@@ -1,8 +1,8 @@
 name: Compile LaTeX and Create Release
-
 on:
   push:
     branches: [ master ]  
+  workflow_dispatch:
 
 jobs:
   compile_latex:
@@ -14,7 +14,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex  # Replace with your main .tex file name
+          root_file: main.tex
           latexmk_use_xelatex: true
 
       - name: Check for PDF
@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%d/%m/%y-%s')"
+        run: echo "date=$(date +'%d/%m/%y-%s')" >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
@@ -76,20 +76,22 @@ jobs:
     needs: compile_latex
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-          
-      - name: Copy generated PDF to deployment directory
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-pdf
+
+      - name: Create deployment directory
         run: |
           mkdir -p out
-          cp main.pdf out/Pushpinder_Resume.pdf
+          mv main.pdf out/Pushpinder_Resume.pdf
 
       - name: Create index.html
         run: |
-          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a></body></html>' > ./out/index.html
+          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a></body></html>' > out/index.html
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAT }}
           publish_dir: ./out
