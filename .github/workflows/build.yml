@@ -1,7 +1,6 @@
 name: Compile LaTeX and Create Release
 on:
   push:
-    branches: [ master ]  
   workflow_dispatch:
 
 jobs:
@@ -36,6 +35,7 @@ jobs:
 
   create_release:
     needs: compile_latex
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -60,6 +60,7 @@ jobs:
 
   upload_asset:
     needs: [compile_latex, create_release]
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -80,6 +81,7 @@ jobs:
 
   deploy_to_github_pages:
     needs: compile_latex
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: write
