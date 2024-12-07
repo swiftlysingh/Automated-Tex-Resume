@@ -48,6 +48,10 @@ jobs:
         run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
         id: extract_branch
 
+      - name: Update Resume name
+        shell: bash
+        run: cp main.pdf "Pushpinder's Resume.pdf"
+
       - name: Create Release with Asset
         uses: softprops/action-gh-release@v1
         env:
