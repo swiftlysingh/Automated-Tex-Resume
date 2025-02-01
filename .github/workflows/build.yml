@@ -19,12 +19,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: resume.tex
           latexmk_use_xelatex: true
 
       - name: Check for PDF
         run: |
-          if [ -f "main.pdf" ]; then
+          if [ -f "resume.pdf" ]; then
             echo "PDF file found"
           else
             echo "PDF file not found"
@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: main.pdf
+          path: resume.pdf
 
   create_release:
     needs: compile_latex
@@ -58,7 +58,7 @@ jobs:
           name: resume-pdf
 
       - name: Rename PDF
-        run: mv main.pdf "Pushpinder's Resume.pdf"
+        run: mv resume.pdf "Pushpinder's Resume.pdf"
 
       - name: Create Release with Asset
         uses: softprops/action-gh-release@v1
@@ -91,7 +91,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           tag_name: v${{ steps.date.outputs.date }}
-          files: main.pdf
+          files: resume.pdf
           name: Pushpinder_Resume.pdf
 
   deploy_to_github_pages:
@@ -109,7 +109,7 @@ jobs:
       - name: Create deployment directory
         run: |
           mkdir -p out
-          mv main.pdf out/Pushpinder_Resume.pdf
+          mv resume.pdf out/Pushpinder_Resume.pdf
 
       - name: Create index.html
         run: |
