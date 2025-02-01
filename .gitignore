@@ -1,5 +1,30 @@
-main.log
-main.pdf
-main.fls
-main.fdb_latexmk
-main.aux
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.pdf
+
+# Editor files
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.backup
+*.bak
+
+# Additional LaTeX files
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+_minted*/
