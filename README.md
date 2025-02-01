@@ -1,77 +1,46 @@
-Deedy-Resume
-=========================
+# Resume Automation
 
-A **one-page**, **two asymmetric column** resume template in **XeTeX** that caters particularly to an **undergraduate Computer Science** student.
-As of **v1.2**, there is an option to choose from two templates:
+This repository contains an automated system for managing and deploying a professional resume using GitHub Actions. The setup ensures that any updates to the resume are processed, compiled, and deployed seamlessly.
 
-1. **MacFonts** - uses fonts native to OSX - *Helvetica*, *Helvetica Neue* (and it's Light and Ultralight versions) and the CJK fonts *Heiti SC*, and *Heiti TC*. The EULA of these fonts prevents distribution on Open Source.
-2. **OpenFonts** - uses free, open-source fonts that resemble the above - *Lato* (and its various variants) and *Raleway*.
+## Features
+- **Automated Deployment**: Uses GitHub Actions to compile and deploy the latest version of the resume.
+- **Continuous Integration**: Ensures the resume is always up-to-date with the latest modifications.
+- **Version Control**: Maintains a history of changes, allowing easy rollback if needed.
+- **PDF Generation**: Automatically compiles the resume into a high-quality PDF format.
 
-It is licensed under the Apache License 2.0.
+## How It Works
+1. **Update Your Resume**: Modify the source `.tex` file with new content.
+2. **Commit Changes**: Push the changes to the repository.
+3. **Automated Workflow**: GitHub Actions triggers the build process.
+4. **Deployment**: The generated PDF is automatically uploaded and made available.
 
-## Motivation
+## Setup Instructions
+1. Fork or clone this repository.
+2. Install LaTeX dependencies (`TeX Live` recommended).
+3. Modify `resume.tex` with your details.
+4. Push the changes to trigger the GitHub Actions workflow.
 
-Common LaTeX resume-builders such as [**moderncv**](http://www.latextemplates.com/template/moderncv-cv-and-cover-letter)  and the [**friggeri-cv**](https://github.com/afriggeri/cv) look great if you're looking for a multi-page resume with numerous citations, but usually imperfect for making a thorough, single-page one. A lot of companies today search resumes based on [keywords](http://www.businessinsider.com/most-big-companies-have-a-tracking-system-that-scans-your-resume-for-keywords-2012-1) but at the same time require/prefer a one-page resume, especially for undergraduates. 
+## GitHub Actions Workflow
+The workflow is defined in `.github/workflows/build.yml` and includes:
+- Checking out the latest repository state.
+- Installing LaTeX dependencies.
+- Compiling the `.tex` file to generate a PDF.
+- Deploying the generated PDF as an artifact.
 
-This template attempts to **look clean**, highlight **details**, be a **single page**, and allow useful **LaTeX templating**.
+## Example Usage
+After making updates to `resume.tex`, simply commit and push. The workflow will handle:
+- Compiling the LaTeX source.
+- Generating an updated PDF version.
+- Uploading the latest resume automatically.
 
-## Preview
+## Why Use This Setup?
+- Eliminates manual compilation steps.
+- Ensures consistency in resume formatting.
+- Provides an automated way to keep the resume readily available.
 
-### OpenFonts
-![alt tag](https://raw.githubusercontent.com/deedydas/Deedy-Resume/master/OpenFonts/sample-image.png)
-
-### MacFonts
-![alt tag](https://raw.githubusercontent.com/deedydas/Deedy-Resume/master/MacFonts/sample-image.png)
-
-## Dependencies
-
-1. Compiles only with **XeTeX** and required **BibTex** for compiling publications and the .bib filetype.
-2. Uses fonts that are usually only available to **Mac** users such as Helvetica Neue Light.
-
-## Availability
-
-1. MacFonts version - [as an online preview](http://debarghyadas.com/resume/debarghya-das-resume.pdf) and [as a direct download](https://github.com/deedydas/Deedy-Resume/raw/master/MacFonts/deedy_resume.pdf)
-2. OpenFonts version - [as a direct download](https://github.com/deedydas/Deedy-Resume/raw/master/OpenFonts/deedy_resume-openfont.pdf)
-3. **Overleaf**.com (formerly **WriteLatex**.com) (v1 fonts/colors changed) - [compilable online](https://www.writelatex.com/templates/deedy-resume/sqdbztjjghvz#.U2H9Kq1dV18)
-4. **ShareLatex**.com (v1 fonts changes) - [compilable online](https://www.sharelatex.com/templates/cv-or-resume/deedy-resume)
-
-## Changelog
-### v1.2
- 1. Added publications in place of societies.
- 2. Collapsed a portion of education.
- 3. Fixed a bug with alignment of overflowing long last updated dates on the top right. 
-
-### v1.1
- 1. Fixed several compilation bugs with \renewcommand
- 2. Got Open-source fonts (Windows/Linux support)
- 3. Added Last Updated
- 4. Moved Title styling into .sty
- 5. Commented .sty file.
-
-## TODO
-1. Merge OpenFont and MacFonts as a single sty with options.
-2. Figure out a smoother way for the document to flow onto the next page.
-3. Add styling information for a "Projects/Hacks" section.
-4. Add location/address information
-5. Fix the hacky 'References' omission outside the .cls file in the MacFonts version.
-6. Add various styling and section options and allow for multiple pages smoothly.
-
-## Known Issues:
-1. Overflows onto second page if any column's contents are more than the vertical limit
-2. Hacky space on the first bullet point on the second column.
-3. Hacky redefinition of \refname to omit 'References' text for publications in the MacFonts version.
+## Reference
+For more details on setting up GitHub Actions for resume deployment, check out my blog post: [Using GitHub Actions for Automated Resume Deployment](https://swiftlysingh.com/using-github-actions-for-automated-resume-deployment)
 
 ## License
-    Copyright 2014 Debarghya Das
+This project is licensed under the Apache License 2.0. See `LICENSE` for more details.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
