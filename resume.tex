@@ -1,9 +1,7 @@
 \documentclass{fonts}
 \usepackage{fancyhdr}
- 
 \pagestyle{fancy}
 \fancyhf{}
- 
 \begin{document}
 
 
@@ -22,8 +20,7 @@
 
 \section{Experience}
 \textbf{\href{https://www.gojek.io/}{\runsubsection{Software Engineer - Mobile |}}} 
-\descript{GOJEK}
-\location{May 2022 – August 2024}
+\descript{GOJEK \datetext{May '22 – Aug '24}}
 \begin{tightemize}
     \item Revamped Help Center UI, improving usability and reducing support queries by 15\%.
     \item Built a PIN-based auth framework, enabling a single PIN across multiple GoTo apps, reducing development time by 20\%.
@@ -33,9 +30,8 @@
 \end{tightemize}
 \sectionsep
 
-\textbf{\href{https://summerofcode.withgoogle.com/projects/6623823417311232}{\runsubsection{Swift Developer |}}} 
-\descript{Google Summer of Code - VideoLAN}
-\location{June 2021 – August 2021}
+\textbf{\href{https://summerofcode.withgoogle.com/projects/6623823417311232}{\runsubsection{iOS Developer |}}} 
+\descript{Google Summer of Code - VideoLAN \datetext{June '21 – Aug '21}}
 \begin{tightemize}
     \item Added the "Continue Watching" feature in VLC media player for iOS, enhancing user retention and engagement.
     \item Improved UI/UX using Swift, aligning with Apple's design guidelines for a more intuitive user experience.
@@ -43,6 +39,31 @@
     \item Fixed critical bugs, increasing the stability and performance of the VLC iOS app.
     \item Contributed to documentation, improving onboarding for new developers in the VideoLAN community.
 \end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TECHNICAL CONTRIBUTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Open Source}
+
+\textbf{\runsubsection{\href{https://github.com/swiftlang}{SwiftLang |}}}
+\descript{The Swift programming language - \linktext{https://github.com/swiftlang/swift-build/pulls?q=is:pr+author:swiftlysingh+}{GitHub} \datetext{Present}}
+\begin{tightemize}
+    \item Added new flags for diagnostic groups in the build system.
+    \item Added a check for the Apple Clang and removing unsported flags.
+    \item Swift Information Architecture Projects
+    \item Supporting people on the forums
+\end{tightemize}
+\sectionsep
+
+\textbf{\runsubsection{VideoLAN |}}
+\descript{The VLC media player \datetext{2021}}
+\begin{tightemize}
+    \item Redesigned video controls UI to match iOS design guidelines, increasing user satisfaction by 27\%.
+    \item Optimized media playback for low-powered devices, reducing battery consumption by 18\%.
+    \item Contributed to accessibility improvements, bringing VoiceOver support to 95\% of app functions.
+\end{tightemize}
+\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
@@ -57,8 +78,8 @@
 
 \section{Projects}
 
-\textbf{\href{https://apps.apple.com/app/artiweather/id6446815662}{\runsubsection{ArtiWeather}}} 
-\location{An Art Weather App}
+\textbf{\href{https://apps.apple.com/app/artiweather/id6446815662}{\runsubsection{ArtiWeather |}}} 
+\descript{An Art Weather App - \linktext{https://apps.apple.com/app/artiweather/id6446815662}{AppStore}}
 \begin{tightemize}
     \item Developed and launched ArtiWeather for iOS 18, achieving 1.2k downloads and 5k organic impressions on launch day.
     \item Integrated on-device Stable Diffusion for weather-based image generation, solving real-time rendering challenges.
@@ -67,8 +88,8 @@
 \end{tightemize}
 \sectionsep
 
-\textbf{\href{https://github.com/swiftlysingh/Holder}{\runsubsection{Holder}}} 
-\location{A Secure Card Vault}
+\textbf{\href{https://github.com/swiftlysingh/Holder}{\runsubsection{Holder |}}} 
+\descript{A Secure Card Vault - \linktext{https://apps.apple.com/in/app/holder-a-secure-card-vault/id6475649492}{AppStore}}
 \begin{tightemize}
     \item Built an iOS app using Swift for securely storing credit and debit card details.
     \item Used iOS Keychain with iCloud sync for encrypted storage, ensuring data privacy through local-only storage.
@@ -81,37 +102,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Awards} 
-\begin{tabular}{rll}
-2021 & \textbf{Winner} & \textbf{Smart India Hackathon 2020} \\
-     & & Built an AI IoT system to predict and adjust lighting and HVAC demand using sensors. \\
-     & & SIH is a national hackathon by the Government of India, tackling real-world challenges.
-\end{tabular}
+\textbf{\runsubsection{Smart India Hackathon 2020 |}}
+\descript{Winner \datetext{2021}}
+\begin{tightemize}
+    \item Built an AI IoT system to predict and adjust lighting and HVAC demand using sensors.
+    \item SIH is a national hackathon by the Government of India, tackling real-world challenges.
+\end{tightemize}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PUBLICATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \section{Publications} 
-% \renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+% Comment out original bibliography approach
+% \renewcommand\refname{\vskip -1.5em} 
 % \bibliographystyle{abbrv}
 % \bibliography{publications}
 % \nocite{*}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %     EDUCATION
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education} 
 
 \runsubsection{MS in Computer Science |}
-\descript{California State University}
-\location{August 2024 - May 2026 (Expected) | Sacramento, California}
+\descript{California State University, Sacramento \datetext{Aug '24 - May '26}}
 
-% \vspace{\topsep}
 \sectionsep
 \runsubsection{BE in Computer Engineering |}
-\descript{Netaji Subhas University of Technology }
-\location{Aug 2018 - May 2022 | New Delhi, IN}
+\descript{Netaji Subhas University of Technology \datetext{Aug '18 - May '22}}
 
 \end{document}
