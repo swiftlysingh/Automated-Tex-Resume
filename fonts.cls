@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
+\usepackage[hmargin=1.25cm, vmargin=0.65cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 
 % Publications
@@ -60,7 +60,7 @@ Last Updated on \today
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{15pt}{18pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
@@ -95,6 +95,6 @@ Last Updated on \today
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt \color{primary}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
+\vspace{-\topsep}\begin{itemize}\itemsep0.4pt \parskip0pt \parsep0pt \color{primary}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{11.5pt}\selectfont}
 {\end{itemize}\vspace{-\topsep}}
 
