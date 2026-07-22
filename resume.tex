@@ -3,6 +3,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
 \begin{document}
 
 
@@ -12,73 +13,75 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{}{Pushpinder Pal Singh}{ 
-{ AI Product Engineer }
-% \\[2pt]
-{· Sacramento, CA · Open to relocation  } 
-\\ [2pt]
-\urlstyle{same}\href{https://swifti.ng}{swifti.ng} | \href{https://github.com/swiftlysingh}{github/swiftlysingh} | \href{https://linkedin.com/in/pushpinderpalsingh}{linkedin} | \href{mailto:singh.pushpinderp@gmail.com}{singh.pushpinderp@gmail.com}
+
+% \\ [2pt]$
+\urlstyle{same}\href{https://swifti.ng}{portfolio} | \href{https://github.com/swiftlysingh}{github} | \href{https://www.linkedin.com/in/swiftlysingh/}{linkedin} | \href{mailto:hi@swifti.ng}{hi@swifti.ng} | Sacramento, CA
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Profile
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Profile}
+\section{}
+\vspace{-17pt}
 \raggedright
-AI Product Engineer with 3+ years of professional mobile engineering experience and 6+ years shipping iOS apps independently.
-Builds production SwiftUI and UIKit apps with Core ML and Vision features, subscriptions, backend API integrations, analytics, CI/CD, and TestFlight releases. 
-Recently shipped RetroBudget, a SwiftUI AI spend tracker with RevenueCat subscriptions and paying users.
+\runsubsection{\textbf{Product Engineer with 3+ years in mobile engineering and 6+ years shipping indie iOS apps.}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
-
-\textbf{\href{}{\runsubsection{Indie Product Engineer |}}} 
-\descript{Promptside Studio \datetext{May '20 - Present}}
+\textbf{\runsubsection{Independent Product Engineer |}}
+\descript{\href{https://promptside.studio/}{Promptside Studio} \datetext{May '20 – Present}}
 \begin{tightemize}
-\item Shipped 5 independent iOS apps, with 2 currently live on the App Store, spanning \emphitalic{SwiftUI}, \emphitalic{UIKit}, CI/CD, TestFlight.
-\item Launched \emphitalic{RetroBudget}, a \emphitalic{SwiftUI} AI spend tracker with \emphitalic{RevenueCat} subscriptions, paying users, and revenue.
-\item Built \emphitalic{Excalidraw CLI}, an agent-friendly \emphitalic{TypeScript} flowchart generator, with PNG/SVG export and 250+ GitHub stars.
+    \item Built and shipped 5 independent iOS apps, with 2 currently available on the App Store.
+    \item Launched \emphitalic{RetroBudget}, a \emphitalic{SwiftUI} AI spend tracker with \emphitalic{RevenueCat} subscriptions and paying users.
+    \item Built and open-sourced \emphitalic{Excalidraw CLI}, reaching 290+ GitHub stars.
 \end{tightemize}
 
-\textbf{\href{}{\runsubsection{Founding Product Engineer |}}} 
-\descript{Barkie.ai \datetext{Jun '25 – Oct '25}}
+\descript{Client: Barkie.ai \datetext{Jun '25 – Oct '25}}
 \begin{tightemize}
-    \item Built the iOS beta from scratch in \emphitalic{SwiftUI} as the sole mobile engineer, delivering a \emphitalic{HIG}-aligned beta UI.
-    \item Integrated on-device \emphitalic{Core ML}/\emphitalic{Vision} scorecard scanning and synchronized results through the \emphitalic{GHIN API}.
-    \item Set up \emphitalic{CI/CD} for automated builds, testing, and \emphitalic{TestFlight} beta deployments.
+    \item Took Barkie.ai from zero to an internal iOS alpha in 2 weeks as the sole iOS engineer.
+    \item Advanced the app to internal beta with on-device \emphitalic{Core ML}/\emphitalic{Vision} scorecard scanning and \emphitalic{GHIN API} synchronization.
+    \item Established \emphitalic{CI/CD} to automate builds, testing, and \emphitalic{TestFlight} distribution.
 \end{tightemize}
-% \sectionsep
 
-
-\textbf{\href{https://www.gojek.io/}{\runsubsection{Software Engineer - Mobile |}}} 
-\descript{GOJEK \datetext{May '22 – Aug '24}}
+\textbf{\href{https://www.gojek.io/}{\runsubsection{Software Engineer, Mobile |}}} 
+\descript{Gojek \datetext{May '22 – Aug '24}}
 \begin{tightemize}
 \item Revamped Help Center UI in \emphitalic{UIKit}, reducing support queries by 15\%.
-\item Built a reusable PIN auth SDK in \emphitalic{Swift}/\emphitalic{VIPER}, adopted across 3 GoTo apps.
+\item Built a reusable PIN auth SDK in \emphitalic{Swift} using \emphitalic{VIPER}, adopted across 3 Gojek apps.
 \item Shipped GoPay \emphitalic{Flutter} features and Server-Driven UI, serving 130M daily users.
 \item Integrated \emphitalic{Protobuf}-based analytics, cutting third-party dependencies and costs by 30\%.
 \end{tightemize}
-% \sectionsep
 
 \textbf{\href{https://summerofcode.withgoogle.com/projects/6623823417311232}{\runsubsection{iOS Developer |}}} 
 \descript{Google Summer of Code - VideoLAN \datetext{Jun '21 – Aug '21}}
 \begin{tightemize}
-    \item Added the "Continue Watching" feature to VLC for iOS, letting users resume playback across sessions.
-    \item Redesigned screens in \emphitalic{UIKit} to match Apple's Human Interface Guidelines.
-    % \item Participated in code reviews, ensuring adherence to best practices and maintaining code quality.
-    % \item Contributed to documentation, improving onboarding for new developers in the VideoLAN community.
+  \item Built VLC for iOS's Continue Watching media-library section in \emphitalic{UIKit}, enabling users to resume recently played videos.
+    \item Fixed a Cast UI bug that left the external playback view visible after media resumed locally.
 \end{tightemize}
-% \sectionsep
 
-% \textbf{\href{}{\runsubsection{Head of Open Source and Mobile Tech |}}} 
-% \descript{IoSD \datetext{Jun '20 – Jun '21}}
-% \begin{tightemize}
-%     \item Created a student mobile app in Flutter from scratch and grew it to 10,000 daily active users.
-%     \item Designed and delivered technical workshops on Git and open-source best practices.
-% \end{tightemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\textbf{\href{https://airportwait.vercel.app/}{\runsubsection{Airport Wait Times |}}}
+\descript{Global Airport Wait-Time Platform - \linktext{https://airportwait.vercel.app/}{Demo}}
+\begin{tightemize}
+    \item Built a map-first platform with normalized wait-time coverage for 100+ airports across 60+ source integrations.
+    \item Designed event-driven \emphitalic{Cloudflare Workers} ingestion with \emphitalic{D1}, Queues, Cron, OpenAPI validation, and fixture-based CI.
+\end{tightemize}
+
+\textbf{\href{https://apps.apple.com/cz/app/offline-card-vault-holder/id6475649492}{\runsubsection{Holder |}}}
+\descript{Secure Card Vault - \linktext{https://apps.apple.com/cz/app/offline-card-vault-holder/id6475649492}{App Store}}
+\begin{tightemize}
+    \item Open-sourced an iOS card vault with \emphitalic{Keychain} sync, biometric auth, and 99.8\% crash-free sessions.
+    \item Built a privacy-safe \emphitalic{WidgetKit} extension for quick card access, exposing only redacted metadata outside the app.
+\end{tightemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TECHNICAL CONTRIBUTIONS
@@ -92,6 +95,7 @@ Recently shipped RetroBudget, a SwiftUI AI spend tracker with RevenueCat subscri
     \item Improved Swift build-system diagnostics by making compiler failure modes easier to understand.
     \item Added Apple Clang compatibility checks and removed unsupported flags to reduce build issues across toolchains.
 \end{tightemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,52 +109,6 @@ Recently shipped RetroBudget, a SwiftUI AI spend tracker with RevenueCat subscri
 
 \noindent
 \textbf{Backend \& Tools:} REST APIs, Protobuf, Server-Driven UI, TypeScript, CI/CD, RevenueCat, CLI/npm tooling
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Projects}
-
-\textbf{\href{https://github.com/swiftlysingh/excalidraw-cli}{\runsubsection{Excalidraw CLI |}}} 
-\descript{CLI for creating flowcharts - \linktext{https://github.com/swiftlysingh/excalidraw-cli}{GitHub}}
-\begin{tightemize}
-    \item Built an agent-friendly CLI for generating clean Excalidraw flowcharts and architecture diagrams from structured text.
-    \item Open-sourced it to 250+ GitHub stars, adding support for arrows, edge labels, bidirectional flows, and npm releases.
-\end{tightemize}
-
-\textbf{\href{https://apps.apple.com/us/app/retrobudget-ai-spend-tracker/id6743363764}{\runsubsection{RetroBudget |}}} 
-\descript{AI Spend Tracker - \linktext{https://apps.apple.com/us/app/retrobudget-ai-spend-tracker/id6743363764}{App Store}}
-\begin{tightemize}
-    \item Launched RetroBudget, a \emphitalic{SwiftUI} AI spend tracker, with \emphitalic{RevenueCat} subscriptions and paying users.
-    \item Parsed bank statements via OpenAI/OpenRouter structured outputs to categorize spending, with no server-side storage.
-\end{tightemize}
-% \sectionsep
-
-% \textbf{\href{https://github.com/swiftlysingh/Holder}{\runsubsection{Holder |}}} 
-% \descript{A Secure Card Vault - \linktext{https://apps.apple.com/in/app/holder-a-secure-card-vault/id6475649492}{AppStore}}
-% \begin{tightemize}
-%     \item Published an iOS app in Swift and SwiftUI for securely storing card details, with 8 releases and zero reported crashes.
-%     \item Used iOS Keychain with iCloud sync for end-to-end encrypted storage across devices.
-%     \item Secured the vault with Face ID and Touch ID.
-% \end{tightemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Awards} 
-\textbf{\runsubsection{Smart India Hackathon |}}
-\descript{National Winner: AI System for Lighting and HVAC Optimization. \datetext{2021}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Comment out original bibliography approach
-% \renewcommand\refname{\vskip -1.5em} 
-% \bibliographystyle{abbrv}
-% \bibliography{publications}
-% \nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
@@ -159,15 +117,35 @@ Recently shipped RetroBudget, a SwiftUI AI spend tracker with RevenueCat subscri
 \section{Education} 
 \runsubsection{\makebox[5.6cm][l]{Master's in Computer Science} |}
 \descript{California State University \datetext{Aug '24 – Dec '26}}
+\begin{tightemize}
+    \item Built \emphitalic{ChartLLM}, a tool-augmented chart analysis system achieving 100\% accuracy across 26 statistical tasks.
+    \item Placed 112th of 4,894 teams in the National Cyber League cybersecurity competition.
+\end{tightemize}
 
 % \sectionsep
 
 \runsubsection{\makebox[5.6cm][l]{Technology Entrepreneurship} |}
 \descript{Stanford University  \datetext{Jun '25 – Aug '25}}
+\begin{tightemize}
+    \item Prototyped \emphitalic{Rosie}, an ESP32-C3 storytelling device designed to reduce children's bedtime screen use.
+    \item Conducted customer discovery, competitive analysis, and outreach to local schools for product validation.
+\end{tightemize}
 
 % \sectionsep
 
 \runsubsection{\makebox[5.6cm][l]{BE in Computer Engineering} |}
 \descript{Delhi University  \datetext{Aug '18 – May '22}}
+\begin{tightemize}
+    \item Co-authored 2 peer-reviewed papers on blockchain-secured routing for opportunistic IoT, published by IEEE and Springer.
+    \item Led open-source and mobile initiatives and helped ship a Flutter campus app used by 10,000 daily users.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\textbf{\runsubsection{Smart India Hackathon |}}
+\descript{National Winner: AI System for Lighting and HVAC Optimization. \datetext{2021}}
 
 \end{document}

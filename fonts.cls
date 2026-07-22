@@ -54,13 +54,13 @@ Last Updated on \today
 
 % Section seperators 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{0pt}{0pt} 
+\titlespacing{\section}{0pt}{3pt}{1pt} 
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \newcommand{\sectionsep}{\vspace{6pt}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{20pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
