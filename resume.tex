@@ -3,6 +3,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
 \begin{document}
 
 
@@ -22,6 +23,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{}
+\vspace{-14pt}
 \raggedright
 \runsubsection{\textbf{Product Engineer with 3+ years in mobile engineering and 6+ years shipping indie iOS apps.}}
 
@@ -30,19 +32,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
-\textbf{\runsubsection{Founder \& Product Engineer |}}
-\descript{\href{https://promptside.studio/}{Promptside Studio} \datetext{May '20 - Present}}
+\textbf{\runsubsection{Independent Product Engineer |}}
+\descript{\href{https://promptside.studio/}{Promptside Studio} \datetext{May '20 – Present}}
 
 \noindent
 
 \begin{tightemize}
     \item Built and shipped 5 independent iOS apps, with 2 currently available on the App Store.
     \item Launched \emphitalic{RetroBudget}, a \emphitalic{SwiftUI} AI spend tracker with \emphitalic{RevenueCat} subscriptions and paying users.
-    \item Built and open-sourced \emphitalic{Excalidraw CLI}, reaching 290+ GitHub stars.
+    \item Built and open-sourced \emphitalic{Excalidraw CLI}, reaching 290+ GitHub stars and 32k+ impressions.
 \end{tightemize}
 
 \noindent
-\descript{Client: Barkie.ai \datetext{Jun '25 -- Oct '25}}
+\descript{Client: Barkie.ai \datetext{Jun '25 – Oct '25}}
 \begin{tightemize}
     \item Took Barkie.ai from zero to an internal iOS alpha in 2 weeks as the sole iOS engineer.
     \item Advanced the app to internal beta with on-device \emphitalic{Core ML}/\emphitalic{Vision} scorecard scanning and \emphitalic{GHIN API} synchronization.
@@ -67,7 +69,7 @@
 \descript{Google Summer of Code - VideoLAN \datetext{Jun '21 – Aug '21}}
 \begin{tightemize}
     \item Added the "Continue Watching" feature to VLC for iOS, letting users resume playback across sessions.
-    \item Redesigned screens in \emphitalic{UIKit} to match Apple's Human Interface Guidelines.
+    % \item Redesigned screens in \emphitalic{UIKit} to match Apple's Human Interface Guidelines.
     % \item Participated in code reviews, ensuring adherence to best practices and maintaining code quality.
     % \item Contributed to documentation, improving onboarding for new developers in the VideoLAN community.
 \end{tightemize}
@@ -81,6 +83,26 @@
 % \end{tightemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\textbf{\href{https://airportwait.vercel.app/}{\runsubsection{Airport Wait Times |}}}
+\descript{Global Airport Wait-Time Platform - \linktext{https://airportwait.vercel.app/}{Demo}}
+\begin{tightemize}
+    \item Built a map-first platform with normalized wait-time coverage for 100+ airports across 60+ source integrations.
+    \item Designed event-driven ingestion with \emphitalic{Cloudflare Workers}, \emphitalic{D1}, Queues, Cron, OpenAPI, and fixture-based CI.
+\end{tightemize}
+
+\textbf{\href{https://apps.apple.com/cz/app/offline-card-vault-holder/id6475649492}{\runsubsection{Holder |}}}
+\descript{Secure Card Vault - \linktext{https://apps.apple.com/cz/app/offline-card-vault-holder/id6475649492}{App Store}}
+\begin{tightemize}
+    \item Built and open-sourced an iOS card vault using synchronizable \emphitalic{Keychain} storage and biometric/passcode authentication.
+    \item Added \emphitalic{WidgetKit} deep links while exposing only redacted card metadata through the app-group boundary.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TECHNICAL CONTRIBUTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -92,6 +114,7 @@
     \item Improved Swift build-system diagnostics by making compiler failure modes easier to understand.
     \item Added Apple Clang compatibility checks and removed unsupported flags to reduce build issues across toolchains.
 \end{tightemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,52 +128,6 @@
 
 \noindent
 \textbf{Backend \& Tools:} REST APIs, Protobuf, Server-Driven UI, TypeScript, CI/CD, RevenueCat, CLI/npm tooling
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Projects}
-
-\textbf{\href{https://github.com/swiftlysingh/excalidraw-cli}{\runsubsection{Excalidraw CLI |}}} 
-\descript{CLI for creating flowcharts - \linktext{https://github.com/swiftlysingh/excalidraw-cli}{GitHub}}
-\begin{tightemize}
-    \item Built an agent-friendly CLI for generating clean Excalidraw flowcharts and architecture diagrams from structured text.
-    \item Open-sourced it to 250+ GitHub stars, adding support for arrows, edge labels, bidirectional flows, and npm releases.
-\end{tightemize}
-
-\textbf{\href{https://apps.apple.com/us/app/retrobudget-ai-spend-tracker/id6743363764}{\runsubsection{RetroBudget |}}} 
-\descript{AI Spend Tracker - \linktext{https://apps.apple.com/us/app/retrobudget-ai-spend-tracker/id6743363764}{App Store}}
-\begin{tightemize}
-    \item Launched RetroBudget, a \emphitalic{SwiftUI} AI spend tracker, with \emphitalic{RevenueCat} subscriptions and paying users.
-    \item Parsed bank statements via OpenAI/OpenRouter structured outputs to categorize spending, with no server-side storage.
-\end{tightemize}
-% \sectionsep
-
-% \textbf{\href{https://github.com/swiftlysingh/Holder}{\runsubsection{Holder |}}} 
-% \descript{A Secure Card Vault - \linktext{https://apps.apple.com/in/app/holder-a-secure-card-vault/id6475649492}{AppStore}}
-% \begin{tightemize}
-%     \item Published an iOS app in Swift and SwiftUI for securely storing card details, with 8 releases and zero reported crashes.
-%     \item Used iOS Keychain with iCloud sync for end-to-end encrypted storage across devices.
-%     \item Secured the vault with Face ID and Touch ID.
-% \end{tightemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Awards} 
-\textbf{\runsubsection{Smart India Hackathon |}}
-\descript{National Winner: AI System for Lighting and HVAC Optimization. \datetext{2021}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Comment out original bibliography approach
-\renewcommand\refname{\vskip -1.5em} 
-\bibliographystyle{abbrv}
-\bibliography{publications.bib}
-\nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
@@ -159,15 +136,35 @@
 \section{Education} 
 \runsubsection{\makebox[5.6cm][l]{Master's in Computer Science} |}
 \descript{California State University \datetext{Aug '24 – Dec '26}}
+\begin{tightemize}
+    \item Built \emphitalic{ChartLLM}, a tool-augmented chart analysis system achieving 100\% accuracy across 26 statistical tasks.
+    \item Ranked 112th of 4,894 teams in the National Cyber League cybersecurity competition.
+\end{tightemize}
 
 % \sectionsep
 
 \runsubsection{\makebox[5.6cm][l]{Technology Entrepreneurship} |}
 \descript{Stanford University  \datetext{Jun '25 – Aug '25}}
+\begin{tightemize}
+    \item Prototyped \emphitalic{Rosie}, an ESP32-C3 storytelling device with a companion iOS test app.
+    \item Conducted customer discovery, competitive analysis, and outreach to local schools for product validation.
+\end{tightemize}
 
 % \sectionsep
 
 \runsubsection{\makebox[5.6cm][l]{BE in Computer Engineering} |}
 \descript{Delhi University  \datetext{Aug '18 – May '22}}
+\begin{tightemize}
+    \item Co-authored 2 peer-reviewed papers on blockchain-secured routing for opportunistic IoT, published by IEEE and Springer.
+    \item Led open-source and mobile initiatives and helped ship a Flutter campus app used by 10,000 daily users.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\textbf{\runsubsection{Smart India Hackathon |}}
+\descript{National Winner: AI System for Lighting and HVAC Optimization. \datetext{2021}}
 
 \end{document}
