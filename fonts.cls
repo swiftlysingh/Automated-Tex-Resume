@@ -44,19 +44,19 @@ Last Updated on \today
 \fontsize{40pt}{60pt}
 \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1 
 \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
-} \\[8pt]
+} \\[5pt]
 \centering{
 \color{headings}
 \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
-\vspace{-10pt}
+\vspace{-18pt}
 }
 
 % Section seperators 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{14pt}{6pt}
+\titlespacing{\section}{0pt}{3pt}{1pt} 
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{8pt}}
+\newcommand{\sectionsep}{\vspace{6pt}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
@@ -85,19 +85,16 @@ Last Updated on \today
 \newcommand{\linktext}[2]{
 \underline{\href{#1}{\textcolor{headings}{\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont{#2}}}}}
 
-% Italic text command. Groups restore the surrounding font; % eats
-% definition newlines so the macros do not insert a leading space.
-\newcommand{\italictext}[1]{%
-  {\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{10pt}{12pt}\selectfont#1}%
-}
+% Italic text command
+\newcommand{\italictext}[1]{
+\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{10pt}{12pt}\selectfont{#1}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
 
 % Emphasized italic text command (with different size)
-\newcommand{\emphitalic}[1]{%
-  {\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{11pt}{13pt}\selectfont#1}%
-}
+\newcommand{\emphitalic}[1]{
+\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{11pt}{13pt}\selectfont{#1}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep5.5pt \parskip0pt \parsep0pt \color{primary}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{13pt}\selectfont}
+\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt \color{primary}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
 {\end{itemize}\vspace{-\topsep}}
 
