@@ -85,13 +85,16 @@ Last Updated on \today
 \newcommand{\linktext}[2]{
 \underline{\href{#1}{\textcolor{headings}{\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont{#2}}}}}
 
-% Italic text command
-\newcommand{\italictext}[1]{
-\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{10pt}{12pt}\selectfont{#1}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
+% Italic text command. Groups restore the surrounding font; % eats
+% definition newlines so the macros do not insert a leading space.
+\newcommand{\italictext}[1]{%
+  {\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{10pt}{12pt}\selectfont#1}%
+}
 
 % Emphasized italic text command (with different size)
-\newcommand{\emphitalic}[1]{
-\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{11pt}{13pt}\selectfont{#1}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\emphitalic}[1]{%
+  {\fontspec[Path = fonts/lato/]{Lato-LigIta}\fontsize{11pt}{13pt}\selectfont#1}%
+}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
