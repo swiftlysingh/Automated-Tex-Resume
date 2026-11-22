@@ -16,37 +16,49 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: |
+            resume.tex
+            resume-fde.tex
           latexmk_use_xelatex: true
 
-      - name: Check for PDF
+      - name: Check for PDFs
         run: |
-          if [ -f "resume.pdf" ]; then
-            echo "PDF file found"
-          else
-            echo "PDF file not found"
+          missing=0
+          for f in resume.pdf resume-fde.pdf; do
+            if [ -f "$f" ]; then
+              echo "PDF file found: $f"
+            else
+              echo "PDF file not found: $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
             exit 1
           fi
 
-      - name: Require single-page PDF
+      - name: Require single-page PDFs
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
-          pages=$(pdfinfo resume.pdf | awk '/^Pages:/ {print $2}')
-          echo "PDF page count: $pages"
-          if [ "$pages" != "1" ]; then
-            echo "::error::resume.pdf must be exactly 1 page (got $pages)"
-            exit 1
-          fi
+          for f in resume.pdf resume-fde.pdf; do
+            pages=$(pdfinfo "$f" | awk '/^Pages:/ {print $2}')
+            echo "$f page count: $pages"
+            if [ "$pages" != "1" ]; then
+              echo "::error::$f must be exactly 1 page (got $pages)"
+              exit 1
+            fi
+          done
 
-      - name: Upload PDF artifact
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: resume.pdf
+          path: |
+            resume.pdf
+            resume-fde.pdf
 
   create_release:
     needs: compile_latex
@@ -68,8 +80,10 @@ jobs:
         with:
           name: resume-pdf
 
-      - name: Rename PDF
-        run: mv resume.pdf "Pushpinder's Resume.pdf"
+      - name: Rename PDFs
+        run: |
+          mv resume.pdf "Pushpinder's Resume.pdf"
+          mv resume-fde.pdf "Pushpinder's FDE Resume.pdf"
 
       - name: Create Release with Asset
         uses: softprops/action-gh-release@v1
@@ -78,7 +92,9 @@ jobs:
         with:
           tag_name: v${{ steps.date.outputs.date }}-${{ steps.extract_branch.outputs.branch }}
           name: Release - ${{ steps.extract_branch.outputs.branch }} - ${{ steps.date.outputs.date }}
-          files: "Pushpinder's Resume.pdf"
+          files: |
+            Pushpinder's Resume.pdf
+            Pushpinder's FDE Resume.pdf
           draft: false
           prerelease: false
           generate_release_notes: true
@@ -102,7 +118,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           tag_name: v${{ steps.date.outputs.date }}
-          files: resume.pdf
+          files: |
+            resume.pdf
+            resume-fde.pdf
           name: Pushpinder_Resume.pdf
 
   deploy_to_github_pages:
@@ -121,10 +139,11 @@ jobs:
         run: |
           mkdir -p out
           mv resume.pdf out/Pushpinder_Resume.pdf
+          mv resume-fde.pdf out/Pushpinder_Resume_FDE.pdf
 
       - name: Create index.html
         run: |
-          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a></body></html>' > out/index.html
+          echo '<html><body><a href="Pushpinder_Resume.pdf">View Resume</a> | <a href="Pushpinder_Resume_FDE.pdf">View FDE Resume</a></body></html>' > out/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
